@@ -1,3 +1,5 @@
+import 'package:weather_app/models/condition_model.dart';
+
 class CurrentWeather {
   String name;
   double temp;
@@ -18,13 +20,4 @@ class CurrentWeather {
   }
 }
 
-class Condition {
-  String text;
-  String icon;
 
-  Condition({required this.icon, required this.text});
-
-  factory Condition.fromJson(Map<String, dynamic> json) {
-    return Condition(icon: 'https:${json['icon']}', text: json['text']);
-  }
-}
